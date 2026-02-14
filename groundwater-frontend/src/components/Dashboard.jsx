@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
-
 import Sidebar from "../layout/Sidebar";
 import Header from "../layout/Header";
-
 import ChartView from "./ChartView";
 import MapView from "./MapView";
 import StatCards from "./StatCards";
@@ -11,6 +9,11 @@ import AddDataForm from "./AddDataForm";
 import DataTable from "./DataTable";
 import InsightCard from "./InsightCard";
 import "../layout/layout.css";
+import ModelTrainer from "./ModelTrainer";
+import Predictor from "./Predictor";
+import PredictionPanel from "./PredictionPanel";
+import ForecastChart from "./ForecastChart";
+import ForecastPanel from "./ForecastPanel";
 
 export default function Dashboard() {
   const [data, setData] = useState([]);
@@ -37,6 +40,12 @@ export default function Dashboard() {
           <ChartView data={data} />
           <DataTable data={data} refresh={fetchData} />
           <InsightCard data={data} />
+          <ModelTrainer />
+          <Predictor />
+          <PredictionPanel />
+          <ForecastChart />
+          <ForecastPanel />
+
         </div>
       </div>
     </div>

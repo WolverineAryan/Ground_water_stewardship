@@ -1,4 +1,5 @@
 const Groundwater = require("../models/Groundwater");
+const axios = require("axios");
 
 // GET all records
 exports.getGroundwater = async (req, res) => {
@@ -39,5 +40,30 @@ exports.updateGroundwater = async (req, res) => {
     res.json(updated);
   } catch (err) {
     res.status(400).json({ message: err.message });
+  }
+};
+
+// Predict record
+exports.predictGroundwater = async (req, res) => {
+
+  const { year } = req.body;
+
+  const response = await axios.post(
+    "http://localhost:8000/predict",
+    { year }
+  );
+
+  res.json(response.data);
+};
+
+exports.getForecast = async (req, res) => {
+  try {
+    const response = await axios.get(
+      "http://localhost:8000/forecast"
+    );
+
+    res.json(response.data);
+  } catch (err) {
+    res.status(500).json({ message: "ML service error" });
   }
 };

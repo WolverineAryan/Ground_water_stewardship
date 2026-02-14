@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./layout.css";
 
 export default function Sidebar() {
@@ -6,10 +7,10 @@ export default function Sidebar() {
       <h2>💧 GW Monitor</h2>
 
       <ul>
-        <li>Dashboard</li>
-        <li>Groundwater Data</li>
-        <li>Analytics</li>
-        <li>Reports</li>
+        <li><Link to="/">Dashboard</Link></li>
+        <li><Link to="/data">Groundwater Data</Link></li>
+        <li><Link to="/analytics">ML Analytics</Link></li>
+        <li><Link to="/reports">Reports</Link></li>
       </ul>
     </div>
   );
