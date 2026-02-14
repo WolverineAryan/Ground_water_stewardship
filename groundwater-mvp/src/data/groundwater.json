@@ -1,0 +1,30 @@
+[
+  {
+    "taluka": "Nashik",
+    "lat": 19.9975,
+    "lng": 73.7898,
+    "year": 2020,
+    "depth": 15
+  },
+  {
+    "taluka": "Nashik",
+    "lat": 19.9975,
+    "lng": 73.7898,
+    "year": 2021,
+    "depth": 18
+  },
+  {
+    "taluka": "Nashik",
+    "lat": 19.9975,
+    "lng": 73.7898,
+    "year": 2022,
+    "depth": 22
+  },
+  {
+    "taluka": "Nashik",
+    "lat": 19.9975,
+    "lng": 73.7898,
+    "year": 2023,
+    "depth": 25
+  }
+]
